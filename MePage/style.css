@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    min-height: 200vh;
+    background-color: white;
+}
+.colors-black{
+    background-color: black;
+}
+.colors-white-txt{
+    color: white;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 5;
+    box-shadow: 0px 2px 23px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 2.5rem;
+    padding-right: 20px;
+}
+.logo h3{
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.logo h3:hover{
+    color:rgb(81, 192, 230);
+}
+nav ul{
+    margin: auto 0 auto 0;
+    display: flex;
+    width: 80%;
+    justify-content: flex-start;
+    list-style: none;
+}
+nav ul li{
+    padding-right: 80px;
+}
+nav ul li a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    color: rgb(81, 192, 230);
+}
+.colormode{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 20%;
+    cursor: pointer;
+}
+.colormode  img{
+    height: 1.5rem;
+    margin-right: 10px;
+}
+.colormode a{
+    font-size: 18px;
+}
+.landing{
+    height: 70vh;
+    width: 80vw;
+    padding-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+.laptop-guy{
+    height: 50%;
+    width: auto;
+}
+.landing-text{
+    height: 50%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.landing-text h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.landing-text h1 span{
+    animation: 2.5s flip-horizontal-bottom 0.8s linear infinite;
+    color: rgb(81, 192, 230);
+}
+.landing-text p{
+    color: rgb(124, 124, 124);
+}
+.landing-text-buttons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.landing-text-buttons button{
+    padding: 10px 17px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+.landing-text-buttons button:hover{
+    transition: ease 1s;
+    animation: upNdown linear 0.6s infinite;
+}
+.button-resume{
+    background-color: rgb(243, 243, 243);
+}
+.button-project{
+    background-color: rgb(63, 61, 86);
+    color: rgba(255, 255, 255, 0.952);
+}
+/*skill*/
+.skill-set{
+    padding-top: 12vh;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+}
+
+.skill-list{
+    margin-top: 70px;
+    width: 100%;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+}
+.skill-list > div{
+    display: flex;
+    width: 70%;
+    padding-bottom: 60px;
+    place-self: center ;
+}
+.skill-list > div svg{
+    height: 100%;
+    width: 100%;
+}
+.skill-list > div > div{
+    margin-left: 20px;
+}
+.skill-list >div>div p{
+    color: rgb(95, 95, 95);
+}
+.css3-color{
+    fill: turquoise;
+}
+
+  @keyframes flip-horizontal-bottom {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+       opacity: 1;
+    }
+  }
+  @keyframes upNdown{
+      0%{
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-5px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+  }
