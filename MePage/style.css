@@ -4,12 +4,16 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+:root {
+    --main-bg-color: rgb(81, 192, 230);
+    --black-color: rgb(17, 17, 17);
+  }
 body{
     min-height: 200vh;
     background-color: white;
 }
 .colors-black{
-    background-color: black;
+    background-color: var(--black-color);
 }
 .colors-white-txt{
     color: white;
@@ -28,7 +32,7 @@ header{
 nav{
     width: 80vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 .logo{
     width: 50%;
@@ -64,7 +68,10 @@ nav ul li a{
     cursor: pointer;
 }
 nav ul li a:hover{
-    color: rgb(81, 192, 230);
+    color:var(--main-bg-color);
+}
+.nav-active{
+    color:var(--main-bg-color) ;
 }
 .colormode{
     display: flex;
@@ -91,8 +98,8 @@ nav ul li a:hover{
     margin: auto;
 }
 .laptop-guy{
-    height: 50%;
-    width: auto;
+    max-width: 50%;
+    height: auto;
 }
 .landing-text{
     height: 50%;
@@ -107,7 +114,7 @@ nav ul li a:hover{
 }
 .landing-text h1 span{
     animation: 2.5s flip-horizontal-bottom 0.8s linear infinite;
-    color: rgb(81, 192, 230);
+    color: var(--main-bg-color);
 }
 .landing-text p{
     color: rgb(124, 124, 124);
@@ -138,6 +145,50 @@ nav ul li a:hover{
     background-color: rgb(63, 61, 86);
     color: rgba(255, 255, 255, 0.952);
 }
+/*carousel*/
+.carousel-container{
+    padding-top:150px ;
+    width: 60%;
+    margin: auto;
+    overflow-x: hidden;
+}
+.carousel-slide{
+    display: flex;
+}
+.carousel-slide img{
+    width: 500px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.24);
+}
+.slider1{
+    display: flex;
+}
+.slider1 div{
+    width: 250px;
+    font-size: 15px;
+    margin-right: 80px;
+}
+.slider1-header{
+    color: var(--main-bg-color);
+    margin-bottom: 10px;
+}
+.slider1-services{
+    margin: 10px 0;
+    font-size: 30px;
+}
+/*carousel arrow*/
+.arrows{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arrows i{
+    cursor: pointer;
+    font-size: 30px;
+}
 /*skill*/
 .skill-set{
     padding-top: 12vh;
@@ -151,17 +202,18 @@ nav ul li a:hover{
     width: 100%;
     text-align: left;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 40px;
 }
 .skill-list > div{
     display: flex;
-    width: 70%;
-    padding-bottom: 60px;
-    place-self: center ;
-}
-.skill-list > div svg{
-    height: 100%;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.skill-list > div img{
+    height: 100px;
+    width: 100px;
 }
 .skill-list > div > div{
     margin-left: 20px;
@@ -171,6 +223,47 @@ nav ul li a:hover{
 }
 .css3-color{
     fill: turquoise;
+}
+footer{
+    height: 300px;
+    margin-top: 150px;
+    width: 100%;
+    background-color: var(--black-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.footer-contact{
+    margin: 70px 0 0 10%;
+}
+.footer-phone{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-phone a{
+    color: rgb(185, 183, 183);
+    cursor: pointer;
+    text-decoration: none;
+}
+.footer-phone i{
+    color: rgb(255, 255, 255);
+    background-color: var(--main-bg-color);
+    border: none;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    padding-top: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.footer-about{
+    margin: 70px 10% 0 0px;
+    width: 30%;
+    color: rgb(219, 219, 219);
 }
 
   @keyframes flip-horizontal-bottom {
